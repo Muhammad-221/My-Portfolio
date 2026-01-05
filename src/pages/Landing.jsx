@@ -8,7 +8,7 @@ import ScrollUP from "@/layouts/ScrollUp";
 import { useEffect, useState } from "react";
 import SectionEducation from "./Education";
 
-export default function HomePage(){
+export default function Landing(){
     const [isScroll, setIsScroll] = useState(false)
     useEffect(() =>{
         const handleScroll = () =>{

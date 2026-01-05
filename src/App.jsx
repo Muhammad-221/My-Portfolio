@@ -1,10 +1,9 @@
-import { useRoutes } from "react-router-dom"
-import { routes } from "./routes";
-
+import Landing from "./pages/Landing";
 
 function App() {
-  const elements = useRoutes(routes);
-  return elements;
+  return(
+    <Landing/>
+  )
 }
 
 export default App
