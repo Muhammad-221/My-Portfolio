@@ -10,8 +10,8 @@ export default function SectionProjects(){
                     projectTitle={"Maxim"}
                     description={"This is a description of Project 1."}
                     tools={["React", "Sass", "Bootstrap", "React Router"]}
-                    live={"https://muhammad-221.github.io/maxim-app/"}
-                    github={"https://github.com/muhammad-221/maxim-app"}
+                    live={"https://muhammad-221.github.io/maxim/"}
+                    github={"https://github.com/muhammad-221/maxim"}
                 />
             </div>
         </section>
