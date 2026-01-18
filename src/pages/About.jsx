@@ -15,10 +15,8 @@ export default function SectionAbout(){
                 </p>
                 <div className="flex mt-10 gap-4 max-lg:mt-5 max-md:justify-center max-sm:flex-col">
                     <a 
-                        href="#" 
+                        href="https://drive.usercontent.google.com/u/0/uc?id=1GJdvFmGPUvTzqr7DrF6482jL8-1MY7ob&export=download" 
                         download 
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="text-lg py-2 px-4 flex justify-center items-center gap-2 rounded-lg font-semibold text-white bg-blue-600 hover:bg-blue-500 transition duration-700"
                     >
                         <IoMdDownload className="text-xl"/>
