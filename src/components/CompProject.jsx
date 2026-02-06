@@ -2,16 +2,16 @@ import image from "../assets/images/maxim.jpg";
 import { FaEye } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 
-export default function ProjectCard({projectTitle, description, tools, live, github}) {
+export default function ProjectCard({image, projectTitle, description, tools, live, github}) {
   return (
-    <div className="w-full min-h-100 border border-blue-600/20 overflow-hidden rounded-xl shadow-md hover:shadow-2xl transform hover:-translate-y-2 dark:bg-slate-800 transition duration-300">
+    <div className="w-full min-h-100 border border-blue-600/20 overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 dark:bg-slate-800 transition duration-300">
       <div className="w-full">
-        <img src={image} alt="maxim" className="w-full"/>
+        <img src={image} loading="lazy" alt="project" className="w-full"/>
       </div>
       <div className="p-5 max-lg:p-3">
         <div>
-          <h3 className="text-2xl font-semibold text-indigo-500">{projectTitle}</h3>
-          <p className="text-gray-600 dark:text-gray-300">{description}</p>
+          <h3 className="text-xl font-semibold text-indigo-500 mb-2">{projectTitle}</h3>
+          <p className="text-gray-600 text-sm font-normal dark:text-gray-300">{description}</p>
         </div>
         <div className="flex flex-wrap gap-2 mt-3">
           {tools?.map((tool) => (

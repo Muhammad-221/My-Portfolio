@@ -27,9 +27,7 @@ export default function Landing(){
 
     return(
         <>
-            <header className="w-full h-15 fixed z-50 px-5 flex items-center border-b border-gray-200 bg-white/80 backdrop-blur-lg dark:border-slate-700 dark:bg-slate-900/80">
-                <NavLinks/>
-            </header>
+            <NavLinks/>
             <div className="relative dark:bg-slate-900">
                 <ScrollUP scrollUP={isScroll ? "flex" : "hidden transition duration-700 ease-in-out"}/>
                 <SectionAbout/>
@@ -39,7 +37,6 @@ export default function Landing(){
                 <SectionContact/>
                 <SectionFooter/>
             </div>
-            
         </>
     )
 }

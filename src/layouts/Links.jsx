@@ -29,9 +29,11 @@ export default function NavLinks(){
         {to: "education", label: "Education", icon: <FaGraduationCap className="mr-1"/>},
         {to: "contact", label: "Contact", icon: <IoMdMail className="mr-1"/>}
     ];
+    
     const style = "text-xl font-semibold text-gray-800 hover:text-indigo-600 inline-flex items-center cursor-pointer transition duration-600 max-lg:text-base dark:text-gray-300 dark:hover:text-indigo-500"
+    
     return(
-        <>
+        <header className="w-full h-15 fixed z-50 px-5 flex items-center border-b border-gray-200 bg-white/80 backdrop-blur-lg dark:border-slate-700 dark:bg-slate-900/80">
             <div className="max-md:hidden">
                 <h1 className="text-4xl font-extrabold bg-linear-to-r from-indigo-400 via-purple-400 to-pink-500 bg-clip-text text-transparent max-lg:text-2xl">M & A</h1>
             </div>
@@ -70,7 +72,6 @@ export default function NavLinks(){
                     <IoMdSunny className="text-xl text-white"/> : 
                     <IoMdMoon className="text-xl text-white"/>}
             </Button>
-            
-        </>
+        </header>
     )
 }
