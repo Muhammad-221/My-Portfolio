@@ -1,4 +1,3 @@
-import image from "../assets/images/maxim.jpg";
 import { FaEye } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 
