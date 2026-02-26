@@ -3,7 +3,8 @@ import {
     SiMui,
     SiTailwindcss,
     SiShadcnui,
-    SiTypescript
+    SiTypescript,
+    SiPostman
 } from "react-icons/si";
 import { 
     FaHtml5,
@@ -19,7 +20,6 @@ import { FaGitAlt } from "react-icons/fa6";
 import { GrMysql } from "react-icons/gr";
 
 export default function SkillsLayout(){
-
     const skills =[
         {icon: <FaHtml5 className="size-9 max-sm:size-6 text-[#E34F26]"/>, label: "HTML5"},
         {icon: <FaCss3Alt className="size-9 max-sm:size-6 text-[#1572B6]"/>, label: "CSS3"},
@@ -34,6 +34,7 @@ export default function SkillsLayout(){
         {icon: <SiMui className="size-9 max-sm:size-6 text-[#007FFF]"/>, label: "Material UI"},
         {icon: <SiShadcnui className="size-9 max-sm:size-6 text-black"/>, label: "Shadcn UI"},
         {icon: <FaReact className="size-9 max-sm:size-6 text-[#61DAFB]"/>, label: "Context API"},
+        {icon: <SiPostman className="size-9 max-sm:size-6 text-[#FF6C37]"/>, label: "Postman"},
         {icon: <FaGitAlt className="size-9 max-sm:size-6 text-[#F05033]"/>, label: "Git"},
         {icon: <FaGithub className="size-9 max-sm:size-6 text-black"/>, label: "GitHub"}
     ]

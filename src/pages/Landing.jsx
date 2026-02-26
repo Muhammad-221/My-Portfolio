@@ -11,25 +11,16 @@ import SectionEducation from "./Education";
 export default function Landing(){
     const [isScroll, setIsScroll] = useState(false)
     useEffect(() =>{
-        const handleScroll = () =>{
-            if(window.scrollY > 100){
-                setIsScroll(true);
-            }
-            else{
-                setIsScroll(false);
-            }
-        }
+        const handleScroll = () => window.scrollY > 50 ? setIsScroll(true) : setIsScroll(false);
         window.addEventListener('scroll', handleScroll);
-        return () =>{
-            window.removeEventListener('scroll', handleScroll);
-        }
+        return () => window.removeEventListener('scroll', handleScroll);
     },[])
 
     return(
         <>
             <NavLinks/>
             <div className="relative dark:bg-slate-900">
-                <ScrollUP scrollUP={isScroll ? "flex" : "hidden transition duration-700 ease-in-out"}/>
+                <ScrollUP scrollUP={isScroll}/>
                 <SectionAbout/>
                 <SectionSkills/>
                 <SectionProjects/>
