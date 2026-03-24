@@ -2,6 +2,8 @@ import ProjectCard from "../components/CompProject";
 import TitleSect from "../components/Title";
 import maxim from "../assets/images/maxim.jpg";
 import dashboard from "../assets/images/dashboard.jpg";
+import prayerTimes from "../assets/images/prayer-times.jpg";
+
 
 export default function SectionProjects(){
     return(
@@ -15,6 +17,14 @@ export default function SectionProjects(){
                     tools={["React", "React Router", "Tailwind CSS", "Shadcn-UI"]}
                     live={"https://muhammad-221.github.io/Medical-Analysis/"}
                     github={"https://github.com/Muhammad-221/Medical-Analysis"}
+                />
+                <ProjectCard
+                    image={prayerTimes}
+                    projectTitle={"Prayer Times"}
+                    description={"A modern and responsive prayer times application built using React, Vite, Tailwind CSS and Shadcn-UI. providing an elegant interface for administrative tasks."}
+                    tools={["React", "Axios", "API Integration", "Tailwind CSS", "Shadcn-UI"]}
+                    live={"https://muhammad-221.github.io/prayer-times/"}
+                    github={"https://github.com/Muhammad-221/prayer-times"}
                 />
                 <ProjectCard
                     image={maxim}

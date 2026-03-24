@@ -4,7 +4,8 @@ import {
     SiTailwindcss,
     SiShadcnui,
     SiTypescript,
-    SiPostman
+    SiPostman,
+    SiAxios
 } from "react-icons/si";
 import { 
     FaHtml5,
@@ -35,6 +36,7 @@ export default function SkillsLayout(){
         {icon: <SiShadcnui className="size-9 max-sm:size-6 text-black"/>, label: "Shadcn UI"},
         {icon: <FaReact className="size-9 max-sm:size-6 text-[#61DAFB]"/>, label: "Context API"},
         {icon: <SiPostman className="size-9 max-sm:size-6 text-[#FF6C37]"/>, label: "Postman"},
+        {icon: <SiAxios className="w-8 h-8 text-[#5A29E4]" />, label: "Axios"},
         {icon: <FaGitAlt className="size-9 max-sm:size-6 text-[#F05033]"/>, label: "Git"},
         {icon: <FaGithub className="size-9 max-sm:size-6 text-black"/>, label: "GitHub"}
     ]
