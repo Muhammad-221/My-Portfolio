@@ -1,12 +1,12 @@
-import SectionAbout from "./About";
-import SectionProjects from "./Projects";
-import SectionContact from "./Contact";
-import SectionSkills from "./Skills";
-import NavLinks from "../layouts/Links";
-import SectionFooter from "./Footer";
 import ScrollUP from "@/layouts/ScrollUp";
+import SectionAbout from "./sections/About";
+import SectionSkills from "./sections/Skills";
+import SectionProjects from "./sections/Projects";
+import SectionEducation from "./sections/Education";
+import SectionContact from "./sections/Contact";
+import SectionFooter from "./sections/Footer";
 import { useEffect, useState } from "react";
-import SectionEducation from "./Education";
+import Navbar from "@/layouts/Navbar";
 
 export default function Landing(){
     const [isScroll, setIsScroll] = useState(false)
@@ -17,17 +17,15 @@ export default function Landing(){
     },[])
 
     return(
-        <>
-            <NavLinks/>
-            <div className="relative dark:bg-slate-900">
-                <ScrollUP scrollUP={isScroll}/>
-                <SectionAbout/>
-                <SectionSkills/>
-                <SectionProjects/>
-                <SectionEducation/>
-                <SectionContact/>
-                <SectionFooter/>
-            </div>
-        </>
+        <div className="relative bg-muted/50">
+            <Navbar/>
+            <ScrollUP scrollUP={isScroll}/>
+            <SectionAbout/>
+            <SectionSkills/>
+            <SectionProjects/>
+            <SectionEducation/>
+            <SectionContact/>
+            <SectionFooter/>
+        </div>
     )
 }

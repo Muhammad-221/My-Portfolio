@@ -1,5 +1,14 @@
-export default function TitleSect({title}){
+import AnimatedSection from "@/pages/sections/AnimatedSection";
+
+export default function TitleSect({my, title, description}){
     return(
-        <h1 className="w-full text-6xl font-extrabold text-indigo-500 my-10 text-center max-sm:text-5xl">{title}</h1>
+        <AnimatedSection>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+                {my} <span className="gradient-text">{title}</span>
+            </h2>
+            <p className="text-muted-foreground text-center mb-12 max-w-md mx-auto">
+                {description}
+            </p>
+        </AnimatedSection>
     )
 }

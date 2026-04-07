@@ -1,43 +1,82 @@
-import { FaEye } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa6";
+import { ExternalLink, Github } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function ProjectCard({image, projectTitle, description, tools, live, github}) {
   return (
-    <div className="w-full min-h-100 border border-blue-600/20 overflow-hidden rounded-2xl shadow-md hover:shadow-lg transform hover:-translate-y-2 dark:bg-slate-800 transition duration-300">
-      <div className="w-full">
-        <img src={image} loading="lazy" alt="project" className="w-full"/>
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.15 }}
+      className="bg-card rounded-2xl overflow-hidden card-hover group"
+    >
+      <div className="overflow-hidden">
+        <img src={image} loading="lazy" alt="project" className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"/>
       </div>
-      <div className="p-5 max-lg:p-3">
-        <div>
-          <h3 className="text-xl font-semibold text-indigo-500 mb-2">{projectTitle}</h3>
-          <p className="text-gray-600 text-sm font-normal dark:text-gray-300">{description}</p>
-        </div>
-        <div className="flex flex-wrap gap-2 mt-3">
+      <div className="p-6">
+        <h3 className="text-lg font-bold mb-2">{projectTitle}</h3>
+        <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{description}</p>
+        <div className="flex flex-wrap gap-2 mb-5">
           {tools?.map((tool) => (
-            <span key={tool} className="py-1 px-2 text-xs rounded-full text-gray-700 bg-gray-100 dark:text-gray-300 dark:bg-slate-700">{tool}</span>
+            <span key={tool} className="tech-tag">{tool}</span>
           ))}
         </div>
-        <div className="mt-5 flex gap-3">
+        <div className="flex gap-3">
           <a 
             href={live}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm py-2 px-3 rounded-lg flex items-center gap-2 justify-center font-semibold text-white bg-linear-65 from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 transition duration-700"
+            className="gradient-bg px-4 py-2 rounded-lg text-xs font-medium text-primary-foreground inline-flex items-center gap-1.5 hover:opacity-90 transition-opacity"
           >
-            <FaEye/>
+            <ExternalLink size={13} />
             Live Demo
           </a>
           <a 
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm py-2 px-3 rounded-lg flex items-center gap-2 justify-center font-semibold text-white bg-slate-800 hover:bg-slate-700 dark:text-slate-700 dark:bg-slate-300 dark:hover:bg-slate-200 transition duration-700"
+            className="px-4 py-2 rounded-lg text-xs font-medium border border-border text-foreground inline-flex items-center gap-1.5 hover:border-primary/40 transition-colors"
           >
-            <FaGithub/>
+            <Github size={13}/>
             GitHub
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
+
+{/* <div className="overflow-hidden">
+  <img
+    src={p.img}
+    alt={p.title}
+    className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105"
+  />
+</div>
+<div className="p-6">
+  <h3 className="text-lg font-bold mb-2">{p.title}</h3>
+  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{p.desc}</p>
+  <div className="flex flex-wrap gap-2 mb-5">
+    {p.tags.map((t) => (
+      <span key={t} className="tech-tag">{t}</span>
+    ))}
+  </div>
+  <div className="flex gap-3">
+    <a
+      href={p.live}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="gradient-bg px-4 py-2 rounded-lg text-xs font-medium text-primary-foreground inline-flex items-center gap-1.5 hover:opacity-90 transition-opacity"
+    >
+      <ExternalLink size={13} /> Live Demo
+    </a>
+    <a
+      href={p.github}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 rounded-lg text-xs font-medium border border-border text-foreground inline-flex items-center gap-1.5 hover:border-primary/40 transition-colors"
+    >
+      <Github size={13} /> GitHub
+    </a>
+  </div>
+</div> */}
