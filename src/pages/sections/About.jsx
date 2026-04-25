@@ -32,7 +32,7 @@ export default function SectionAbout(){
                 <div className="flex flex-wrap gap-4 max-md:justify-center">
                     <a
                         download
-                        href="https://drive.usercontent.google.com/u/0/uc?id=1GJdvFmGPUvTzqr7DrF6482jL8-1MY7ob&export=download"
+                        href="https://drive.google.com/uc?export=download&id=1aq6Mr3Kqc5Q-OvNGxdLabzoPRRs--q7E"
                         className="gradient-bg px-6 py-3 rounded-xl font-medium text-sm text-primary-foreground inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
                     >
                         <Download size={16} /> Download CV
