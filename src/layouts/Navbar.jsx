@@ -51,7 +51,7 @@ export default function Navbar(){
                     <div className="flex items-center gap-2 md:hidden">
                         <ThemeToggle/>
                         <button onClick={() => setOpen(!open)} className="text-foreground">
-                        {open ? <X size={22} /> : <Menu size={22} />}
+                            {open ? <X size={22} /> : <Menu size={22} />}
                         </button>
                     </div>
                 </div>
@@ -80,86 +80,6 @@ export default function Navbar(){
                 </motion.div>
                 )}
             </nav>
-            {/* <div className={`w-2/3 flex justify-around mx-auto max-md:flex-col-reverse max-md:fixed max-md:w-full max-md:h-70 max-md:bg-[rgba(33,37,41,0.7)] max-md:z-90 max-md:pt-4 max-md:top-0 max-md:right-0 ${isCollabsed ? 'max-md:visible' : 'max-md:invisible'}`}>
-                <nav className="w-full flex items-center justify-around max-md:h-full max-md:flex-col max-md:bg-white max-md:border-b max-md:border-gray-600/20 dark:max-md:bg-slate-800">
-                    {links.map((link) => (
-                        <Link 
-                            key={link.to}
-                            to={link.to} 
-                            className={style}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                            onClick={changeCollabse}
-                        >
-                            {link.icon}
-                            {link.label}
-                        </Link>
-                    ))}
-                </nav>
-                <div className={`invisible max-md:text-3xl max-md:w-full max-md:mb-3 max-md:ml-4 max-md:flex max-md:justify-start ${isCollabsed ? 'max-md:visible' : 'max-md:invisible'}`}>
-                    <IoMdClose onClick={changeCollabse}/>
-                </div>
-            </div>
-            <div className="hidden text-2xl max-md:block">
-                <FaBars
-                    className={isCollabsed ? 'max-md:hidden' : ''}
-                    onClick={changeCollabse}
-                />
-            </div>
-            <Button 
-                onClick={toggleTheme} 
-                className={"size-9 rounded-full ms-auto bg-indigo-400 hover:bg-indigo-500 transition duration-700"}
-            >
-                {theme === "dark" ? 
-                    <IoMdSunny className="text-xl text-white"/> : 
-                    <IoMdMoon className="text-xl text-white"/>}
-            </Button> */}
         </motion.header>
     )
 }
-
-{/* <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#about" className="text-xl font-display font-bold gradient-text">
-        M & A
-    </a>
-
-    <div className="hidden md:flex items-center gap-8">
-        {links.map((l) => (
-        <a
-            key={l.href}
-            href={l.href}
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
-        >
-            {l.label}
-        </a>
-        ))}
-        <ThemeToggle />
-    </div>
-
-    <div className="flex items-center gap-2 md:hidden">
-        <ThemeToggle />
-        <button onClick={() => setOpen(!open)} className="text-foreground">
-        {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
-    </div>
-</div>
-
-{open && (
-<motion.div
-    initial={{ opacity: 0, height: 0 }}
-    animate={{ opacity: 1, height: "auto" }}
-    className="md:hidden bg-background border-b border-border px-6 pb-4"
->
-    {links.map((l) => (
-    <a
-        key={l.href}
-        href={l.href}
-        onClick={() => setOpen(false)}
-        className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-    >
-        {l.label}
-    </a>
-    ))}
-</motion.div>
-)} */}

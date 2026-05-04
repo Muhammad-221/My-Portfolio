@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/CompProject";
 import TitleSect from "@/components/Title";
 import designkit from "@/assets/images/designkit-project.jpg";
-import dashboard from "@/assets/images/dashboard.jpg";
+import dashboard from "@/assets/images/medical-analysis.jpg";
 import prayerTimes from "@/assets/images/prayer-times.jpg";
 
 const projectsData = [
