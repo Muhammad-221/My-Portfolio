@@ -11,7 +11,7 @@ import Navbar from "@/layouts/Navbar";
 export default function Landing(){
     const [isScroll, setIsScroll] = useState(false)
     useEffect(() =>{
-        const handleScroll = () => window.scrollY > 50 ? setIsScroll(true) : setIsScroll(false);
+        const handleScroll = () => window.scrollY > 90 ? setIsScroll(true) : setIsScroll(false);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     },[])
@@ -19,7 +19,7 @@ export default function Landing(){
     return(
         <div className="relative bg-muted/50">
             <Navbar/>
-            <ScrollUP scrollUP={isScroll}/>
+            {isScroll && <ScrollUP/>}
             <SectionAbout/>
             <SectionSkills/>
             <SectionProjects/>
