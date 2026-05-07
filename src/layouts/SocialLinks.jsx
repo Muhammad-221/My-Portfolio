@@ -25,8 +25,9 @@ export default function SocialLinks(){
     return(
         <motion.div 
             initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="w-full bg-card card-hover p-7 rounded-2xl border flex items-center max-md:justify-around max-md:p-2"
         >
             {socialLinks.map((link, index) => (

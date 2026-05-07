@@ -27,8 +27,9 @@ export default function ContactInfo(){
             {contactDetails.map((item, i) => (
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
                     key={i}
                     className="w-full bg-card card-hover p-5 rounded-2xl border flex items-center max-md:p-2 max-sm:flex-col max-sm:justify-center"
                 >

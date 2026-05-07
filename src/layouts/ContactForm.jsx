@@ -37,15 +37,16 @@ export default function ContactForm(){
     return(
         <motion.div
             initial={{ opacity: 0, x: +50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="w-full min-h-120 bg-card card-hover p-10 rounded-2xl border max-lg:p-5"
         >
             <form onSubmit={handleSubmit}>
                 <div className="grid w-full mb-5 items-center gap-3">
                     <Label htmlFor="Name">Name</Label>
                     <Input 
-                        type="text" 
+                        type="text"
                         id="Name" 
                         placeholder="Enter your name" 
                         value={formData.name} 
