@@ -10,7 +10,7 @@ const projectsData = [
         title : "Medical Analysis",
         description : "A Dashboard that analyzes medical data and presents results in a clear and user-friendly interface.  It provides a user-friendly interface for patients or clinicians to track health data, view analysis reports, and understand medical metrics in a digital format.",
         tools : ["React.js", "React Router", "JavaScript (ES6+)", "Tailwind CSS", "Shadcn UI", "Firebase", "Chart.js"],
-        live : "https://muhammad-221.github.io/Medical-Analysis/",
+        live : "https://medical-analysis-six.vercel.app",
         github : "https://github.com/Muhammad-221/Medical-Analysis"
     },
     {
