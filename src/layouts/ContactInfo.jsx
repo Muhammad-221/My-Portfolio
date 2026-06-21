@@ -12,7 +12,7 @@ const contactDetails = [
     {
         icon: <IoMdMail className="text-4xl mr-4 text-indigo-600 max-sm:mr-0"/> ,
         title: "Email",
-        value: <a href="mailto:mohamedelkalb221@gmail.com" className="text-gray-800 dark:text-gray-300 hover:text-indigo-600">mohamedelkalb221@gmail.com</a>
+        value: <a href="mailto:mohamedabdelmawla422@gmail.com" className="text-gray-800 dark:text-gray-300 hover:text-indigo-600">mohamedelkalb221@gmail.com</a>
     },
     {
         icon: <FaLocationDot className="text-4xl mr-4 text-red-600 max-sm:mr-0"/> ,
